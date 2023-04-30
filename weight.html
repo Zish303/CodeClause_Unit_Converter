@@ -1,0 +1,59 @@
+<!Doctype HTML>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Weight Converter</title>
+</head>
+
+<body>
+	<div class="container my-5 convert-wrap">
+		<h1 class="mb-5">Weight Converter</h1>
+		<div class="card">
+			<h5 class="card-header"> Weight</h5>
+			<div class="card-body">
+				<div class="row">
+					<p>From:</p>
+					<div class="col-md-6 mb-3">
+						<select class="form-select" id="weight-from-unit">
+							<option value="grain">Grain</option>
+							<option value="gram">Gram</option>
+							<option value="ounce">Ounce</option>
+							<option value="pound">Pound</option>
+							<option value="kg">KG</option>
+							<option value="stone">Stone</option>
+						</select>
+					</div>
+					<div class="col-md-6 mb-3">
+						<input class="form-control" type="number" step="0.01" id="weight-from-value">
+					</div>
+				</div>
+				<div class="row">
+					<p>To:</p>
+					<div class="col-md-6 mb-3">
+						<select class="form-select" id="weight-to-unit">
+							<option value="grain">Grain</option>
+							<option value="gram">Gram</option>
+							<option value="ounce">Ounce</option>
+							<option value="pound">Pound</option>
+							<option value="kg">KG</option>
+							<option value="stone">Stone</option>
+						</select>
+					</div>
+					<div class="col-md-6 mb-3">
+						<input class="form-control" id="weight-to-value" readonly>
+					</div>
+				</div>
+				<button class="btn btn-primary" onclick="convertWeight()">
+					Convert</button>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
